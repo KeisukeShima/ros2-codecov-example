@@ -187,6 +187,11 @@ if(BUILD_TESTING)
         APPEND_LIBRARY_DIRS "${append_library_dirs}"
         TIMEOUT 60
       )
+      set_tests_properties(
+        ${test_name}${target_suffix}
+        PROPERTIES
+        LABELS "launch_test"
+      )
       list(
         APPEND generated_python_files
       "${CMAKE_CURRENT_BINARY_DIR}/${test_name}${target_suffix}_$<CONFIG>.py")

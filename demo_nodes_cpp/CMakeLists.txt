@@ -194,6 +194,11 @@ if(BUILD_TESTING)
         RCL_ASSERT_RMW_ID_MATCHES=${rmw_implementation}
         RMW_IMPLEMENTATION=${rmw_implementation}
       )
+      set_tests_properties(
+        test_tutorial_${exe_list_underscore}${target_suffix}
+        PROPERTIES
+        LABELS "launch_test"
+      )
       foreach(executable ${tutorial_executables})
         set_property(
           TEST test_tutorial_${exe_list_underscore}${target_suffix}
