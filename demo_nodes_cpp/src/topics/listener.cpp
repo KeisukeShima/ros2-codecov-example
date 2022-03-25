@@ -19,6 +19,8 @@
 
 #include "demo_nodes_cpp/visibility_control.h"
 
+#include <string>
+
 namespace demo_nodes_cpp
 {
 // Create a Listener class that subclasses the generic rclcpp::Node base class.
