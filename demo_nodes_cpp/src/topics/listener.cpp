@@ -37,6 +37,10 @@ public:
       [this](const std_msgs::msg::String::SharedPtr msg) -> void
       {
         RCLCPP_INFO(this->get_logger(), "I heard: [%s]", msg->data.c_str());
+
+        if (msg->data.find("3") != std::string::npos) {
+          RCLCPP_INFO(this->get_logger(), "Found 3!!!: [%s]", msg->data.c_str());
+        }
       };
     // Create a subscription to the topic which can be matched with one or more compatible ROS
     // publishers.
